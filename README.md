@@ -1,4 +1,4 @@
-<img src="img/presentation.gif" alt="Apresentação" style="zoom: 60%;"/>
+<img src="img/presentation.gif" alt="Apresentação" style="zoom: 140%;"/>
 
 # Game of Life
 
