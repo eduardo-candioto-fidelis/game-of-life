@@ -1,25 +1,31 @@
-function createControls(run, runStoped) {
-    const button = document.querySelector('button');
+function createControls(run, runStoped, randomFill, space) {
+    const start = document.querySelector('#start');
+    const random = document.querySelector('#random');
+    
     runner = requestAnimationFrame(runStoped);
     
     let status = 'stop';
     
-    button.addEventListener('click', _ => {
+    start.addEventListener('click', _ => {
         
         if (status == 'stop') {
             status = 'start';
-            button.textContent = 'Stop';
+            start.textContent = 'Stop';
             
             cancelAnimationFrame(runner);
             runner = setInterval(run, 75);
         }
         else if (status == 'start') {
             status = 'stop';
-            button.textContent = 'Start';
+            start.textContent = 'Start';
             
             clearInterval(runner);
             runner = requestAnimationFrame(runStoped);
         }
+    });
+
+    random.addEventListener('click', _ => {
+        randomFill(space);
     });
 }
 
