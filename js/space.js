@@ -20,7 +20,7 @@ class Space {
         const space = new Space(width, height);
         
         for (let i = 0; i < space.array.length; i++) {
-            space.array[i] = Math.floor(Math.random() * 10000000) == 0 ? 1 : 0;
+            space.array[i] = 0;
         }
 
         return space;
@@ -40,4 +40,10 @@ function createSpace() {
     const height = Math.floor(window.innerHeight / 24 - 1);
 
     return Space.create(width, height);
+}
+
+function randomFill(space) {
+    for (let i = 0; i < space.array.length; i++) {
+        space.array[i] = Math.floor(Math.random() * 3) == 0 ? 1 : 0;
+    }
 }

@@ -9,11 +9,13 @@ table {
 td {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
-button {
-    display: block;
-    margin: auto;
+#buttons {
+    text-align: center;
     margin-top: 5px;
-
+}
+button {
+    cursor: pointer;
 }

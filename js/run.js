@@ -3,7 +3,7 @@ const cells = createGrid(space);
 
 let runner = null;
 
-createControls(run, runEditGrid);
+createControls(run, runEditGrid, randomFill, space);
 
 function run() {
     updateGrid(space, cells);
